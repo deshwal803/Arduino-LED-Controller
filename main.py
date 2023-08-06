@@ -45,42 +45,7 @@ with mp_hand.Hands(min_detection_confidence=0.5,
                     fingers.append(0)
             total=fingers.count(1)
             cnt.led(total)
-            if total==0:
-                cv2.rectangle(image, (20, 300), (270, 425), (0, 255, 0), cv2.FILLED)
-                cv2.putText(image, "0", (45, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-                cv2.putText(image, "LED", (100, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-            elif total==1:
-                cv2.rectangle(image, (20, 300), (270, 425), (0, 255, 0), cv2.FILLED)
-                cv2.putText(image, "1", (45, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-                cv2.putText(image, "LED", (100, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-            elif total==2:
-                cv2.rectangle(image, (20, 300), (270, 425), (0, 255, 0), cv2.FILLED)
-                cv2.putText(image, "2", (45, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-                cv2.putText(image, "LED", (100, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-            elif total==3:
-                cv2.rectangle(image, (20, 300), (270, 425), (0, 255, 0), cv2.FILLED)
-                cv2.putText(image, "3", (45, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-                cv2.putText(image, "LED", (100, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-            elif total==4:
-                cv2.rectangle(image, (20, 300), (270, 425), (0, 255, 0), cv2.FILLED)
-                cv2.putText(image, "4", (45, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-                cv2.putText(image, "LED", (100, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-            elif total==5:
-                cv2.rectangle(image, (20, 300), (270, 425), (0, 255, 0), cv2.FILLED)
-                cv2.putText(image, "5", (45, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
-                cv2.putText(image, "LED", (100, 375), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0), 5)
+            
         cv2.imshow("Frame",image)
         k=cv2.waitKey(1)
         if k==ord('q'):
